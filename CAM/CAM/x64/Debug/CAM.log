@@ -1,0 +1,8 @@
+﻿   Qt/MSBuild: 3.3.1.0
+   Qt: 5.15.2
+  MillPlanar.cpp
+F:\宁波莱布尼茨项目\2024\007\开发文件\src\MillPlanar.cpp(579,25): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+F:\宁波莱布尼茨项目\2024\007\开发文件\src\MillPlanar.cpp(856,19): warning C4101: “domainU”: 未引用的局部变量
+  CAM.vcxproj -> F:\宁波莱布尼茨项目\2024\007\开发文件\CAM\x64\Debug\CAM.exe
+  'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
+  或批处理文件。

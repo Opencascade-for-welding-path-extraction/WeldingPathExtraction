@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>../images/Cloudy.png</file>
+        <file>../images/cursor-magnify.png</file>
+        <file>../images/cursor-magnify-area.png</file>
+        <file>../images/cursor-pan.png</file>
+        <file>../images/cursor-rotate.png</file>
+        <file>MachineLogo.png</file>
+    </qresource>
+    <qresource prefix="/QSS">
+        <file>CAM.qss</file>
+        <file>CAMDialog.qss</file>
+        <file>Combinear.qss</file>
+    </qresource>
+</RCC>

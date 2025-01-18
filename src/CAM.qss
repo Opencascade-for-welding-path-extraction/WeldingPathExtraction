@@ -1,0 +1,128 @@
+/*-----QPushButton-----*/
+QPushButton
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(184, 184, 184, 255),stop:1 rgba(159, 159, 159, 255));
+    border-radius: 3px;
+    color: #000;
+    min-width: 80px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #051a39;
+    padding: 5px;
+
+}
+
+
+QPushButton::flat
+{
+    background-color: transparent;
+    border: none;
+    color: #000;
+
+}
+
+
+QPushButton::disabled
+{
+    background-color: #606060;
+    color: #959595;
+    border-color: #051a39;
+
+}
+
+
+QPushButton::hover
+{
+    background-color: rgba(70,162,218,50%);
+    border: 1px solid #46a2da;
+
+}
+
+
+QPushButton::pressed
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(174, 174, 174, 255),stop:1 rgba(149, 149, 149, 255));
+    border: 1px solid #46a2da;
+
+}
+
+
+QPushButton::checked
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(174, 174, 174, 255),stop:1 rgba(149, 149, 149, 255));
+    border: 1px solid #222;
+
+}
+QPushButton#Dialog{
+    background-color: #F0F0F0; /* 默认背景颜色 */
+    border: 0.5px solid gray;      /* 默认边框 */
+    padding: 4px;               /* 内边距 */
+    border-radius: 3px;         /* 圆角 */
+    min-width: 60px;
+}
+
+QPushButton#Dialog:hover {
+    background-color: yellow;   /* 鼠标悬停时背景颜色 */
+    border: 1px solid darkgray; /* 悬停时边框颜色 */
+}
+
+/*-----QComboBox-----*/
+QComboBox
+{
+    color: #000000;
+    text - align: center;
+}
+QComboBox:hover
+{
+    background-color: #ff0011;}"
+    "QComboBox {color: #000000;}"
+    "QComboBox{ text - align: center; }";
+}
+
+/*-----QTreeWidget-----*/
+QTreeView
+{
+    show-decoration-selected: 1;
+    /*alternate-background-color: #3a3a3a;*/
+    /*selection-color: #fff;*/
+    /*border: 1px solid gray;*/
+    /*padding-top : 5px;*/
+     /*color: #fff;*/
+    font: 8pt;
+
+}
+
+
+QTreeView::item:selected
+{
+    color:#fff;
+    background-color: #262626;
+    border-radius: 0px;
+
+}
+
+
+QTreeView::item:!selected:hover
+{
+    background-color: #262626;
+    border: none;
+    color: white;
+
+}
+
+/*
+QTreeView::branch:has-children:!has-siblings:closed,
+QTreeView::branch:closed:has-children:has-siblings 
+{
+    image: url(://tree-closed.png);
+
+}
+
+
+QTreeView::branch:open:has-children:!has-siblings,
+QTreeView::branch:open:has-children:has-siblings  
+{
+    image: url(://tree-open.png);
+
+}
+*/

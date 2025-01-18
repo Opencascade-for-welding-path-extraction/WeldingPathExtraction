@@ -1,0 +1,43 @@
+/*-----QPushButton-----*/
+QPushButton{
+    background-color: #F0F0F0; /* 默认背景颜色 */
+    border: 0.5px solid gray;      /* 默认边框 */
+    padding: 4px;               /* 内边距 */
+    border-radius: 3px;         /* 圆角 */
+   
+}
+
+QPushButton:hover {
+    background-color: yellow;   /* 鼠标悬停时背景颜色 */
+    border: 1px solid darkgray; /* 悬停时边框颜色 */
+}
+
+
+QPushButton::pressed
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(174, 174, 174, 255),stop:1 rgba(149, 149, 149, 255));
+    border: 1px solid #46a2da;
+
+}
+
+
+QPushButton::checked
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(174, 174, 174, 255),stop:1 rgba(149, 149, 149, 255));
+    border: 1px solid #222;
+
+}
+
+
+/*-----QComboBox-----*/
+QComboBox
+{
+    color: #000000;
+    text - align: center;
+}
+QComboBox:hover
+{
+    background-color: #ff0011;}"
+    "QComboBox {color: #000000;}"
+    "QComboBox{ text - align: center; }";
+}
