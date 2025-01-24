@@ -1171,11 +1171,13 @@ void CAM::MillPlanar::GetWeldingWire()
 	// 创建一个边缘的遍历器
 	TopExp_Explorer faceExplorer;
 	GProp_GProps gProps;
-	for (TopExp_Explorer faceExp(shape, TopAbs_FACE); faceExp.More(); faceExp.Next()) {
+	for (TopExp_Explorer faceExp(shape, TopAbs_FACE); faceExp.More(); faceExp.Next())
+	{
 		const TopoDS_Face& face = TopoDS::Face(faceExp.Current());
 		//std::cout << "Face found!" << std::endl;
 		// 遍历当前面上的所有边 (TopAbs_EDGE)
-		for (TopExp_Explorer edgeExp(face, TopAbs_EDGE); edgeExp.More(); edgeExp.Next()) {
+		for (TopExp_Explorer edgeExp(face, TopAbs_EDGE); edgeExp.More(); edgeExp.Next())
+		{
 			const TopoDS_Edge& edge = TopoDS::Edge(edgeExp.Current());
 			//std::cout << "  Edge found!" << std::endl;
 			// 计算线性属性（包括长度）
@@ -1186,7 +1188,7 @@ void CAM::MillPlanar::GetWeldingWire()
 			auto LastV = TopExp::LastVertex(edge);
 			//qDebug() << lengeh ;
 			/*简单设置筛选条件*/
-			if (lengeh==400 and BRep_Tool::Pnt(FirstV).Y()==12.0 and BRep_Tool::Pnt(LastV).Y() == 12.0)
+			if (lengeh == 400 and BRep_Tool::Pnt(FirstV).Y() == 12.0 and BRep_Tool::Pnt(LastV).Y() == 12.0)
 			{
 				Quantity_Color color1(0 / 255.0, 0.0 / 255.0, 255.0 / 255.0, Quantity_TOC_RGB);
 				viewerWindow->DisplayCoreManager->DisplayShape(edge, Aspect_TOL_DASH, color1, 2.5, "ApproachPath");
@@ -1196,9 +1198,15 @@ void CAM::MillPlanar::GetWeldingWire()
 				Quantity_Color color1(0 / 255.0, 0.0 / 255.0, 255.0 / 255.0, Quantity_TOC_RGB);
 				viewerWindow->DisplayCoreManager->DisplayShape(edge, Aspect_TOL_DASH, color1, 2.5, "ApproachPath");
 			}
-			
+			else if (lengeh == 300 and BRep_Tool::Pnt(FirstV).Y() == 0.0 and BRep_Tool::Pnt(LastV).Y() == 0.0)
+			{
+				Quantity_Color color1(0 / 255.0, 0.0 / 255.0, 255.0 / 255.0, Quantity_TOC_RGB);
+				viewerWindow->DisplayCoreManager->DisplayShape(edge, Aspect_TOL_DASH, color1, 2.5, "ApproachPath");
+			}
+
 		}
 	}
+}
 
 
 
