@@ -25,7 +25,6 @@ namespace CAM
 		GeomAbs_OffsetCurve,
 		GeomAbs_OtherCurve,
 		AllCurve,
-		TopAbs_FACE,
 		VectorType,
 		None
 	};

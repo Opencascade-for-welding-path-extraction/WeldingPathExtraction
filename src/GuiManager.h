@@ -37,7 +37,7 @@ public:
     QWidget* parent{ nullptr };
     QMenuBar* menubar;
     QStatusBar* statusbar;
-    QAction* actionceshi, *actionImportPart;
+    QAction* actionceshi, *actionImportPart,* actionGetLine;
     QMenu* menu;
     MillPlanarGui* mymillplanargui;
 	int initializationsignal{0};//初始化界面完成信号
@@ -45,6 +45,7 @@ public:
 public slots:
     void myslot();
     void importPart();
+    void getWeldingWire();
 
 };
  

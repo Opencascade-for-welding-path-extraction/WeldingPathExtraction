@@ -59,6 +59,9 @@ MainWindow::MainWindow(QWidget* par)
 	actionImportPart = new QAction(this);
     actionImportPart->setObjectName(QString::fromUtf8("actionImportPart"));
 
+	actionGetLine = new QAction(this);
+    actionGetLine->setObjectName(QString::fromUtf8("actionGetLine"));
+
     setStatusBar(new QStatusBar());
     setCentralWidget(myCamWindowManager->viewerWindow->myOccView);
     menubar = new QMenuBar(this);
@@ -72,10 +75,14 @@ MainWindow::MainWindow(QWidget* par)
 	menu->addAction(actionImportPart);
     actionImportPart->setText(QString::fromLocal8Bit("导入零件"));
 
+	menu->addAction(actionGetLine);
+    actionGetLine->setText(QString::fromLocal8Bit("提取焊接线"));
+
     //mymillplanargui = new MillPlanarGui(myCamWindowManager->viewerWindow->myOccView);
 
     connect(actionceshi, SIGNAL(triggered()), this, SLOT(myslot()));
     connect(actionImportPart, SIGNAL(triggered()), this, SLOT(importPart()));
+    connect(actionGetLine, SIGNAL(triggered()), this, SLOT(getWeldingWire()));
   
    
 
@@ -90,6 +97,11 @@ void MainWindow::InitWindow()
 void MainWindow::importPart()
 {
     myCamWindowManager->viewerWindow->ImportPart();
+}
+void MainWindow::getWeldingWire()
+{
+	
+	myCamWindowManager->millPlanar->GetWeldingWire();
 }
 void MainWindow::myslot()
 {

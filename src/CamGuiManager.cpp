@@ -285,7 +285,7 @@ void CAM::MillPlanarGui::captureCurve()
 
 void CAM::MillPlanarGui::captureFace()
 {
-	viewerWindow->interactivemanager->captureShape(TopAbs_FACE);
+	//viewerWindow->interactivemanager->captureShape(TopAbs_FACE);
 }
 
 void CAM::MillPlanarGui::GetSelsctPart()

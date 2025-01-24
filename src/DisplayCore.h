@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "occView.h"
 #include <opencascade/AIS_Plane.hxx>
 #include <opencascade/AIS_Shape.hxx>
@@ -70,6 +70,8 @@ namespace CAM
 	public:
 		map<string, shape*> ShapeManeger;
 		OccView* myOccView;
+		TopoDS_Shape  currentShape;
+
 		
 
 	};

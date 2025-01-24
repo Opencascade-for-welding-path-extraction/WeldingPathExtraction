@@ -45,6 +45,7 @@ namespace CAM
 		void AddHelicalApproach();
 		void AddLinerApproach();
 		void AddRetract();
+		void GetWeldingWire();
 
 	public:
 		TopoDS_Face millface;
