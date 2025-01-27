@@ -569,7 +569,7 @@ void CAM::MillPlanar::ContourMill()
 	TopoDS_Wire awire;
 	TopoDS_Edge aedge;
 	BRepBuilderAPI_MakeWire pathWire;
-	int ID {0};
+	size_t ID {0};
 	string FeedMode{};
 	auto selectCurvesList = viewerWindow->interactivemanager->selectedShapesList;
 	for (auto &iter:selectCurvesList)
@@ -853,7 +853,7 @@ void CAM::MillPlanar::CreateVector(Vector_Type thetype, Standard_Integer reverse
 	   Handle(Geom_Surface) aSurface;
 	   const TopoDS_Face& face = TopoDS::Face(VectorShape);
 	   aSurface = BRep_Tool::Surface(face);
-	   Standard_Real domainU, domainV = 0;
+	   Standard_Real domainU{0}, domainV{0};
 	   gp_Pnt point;
 	   gp_Vec U1;
 	   gp_Vec V1;

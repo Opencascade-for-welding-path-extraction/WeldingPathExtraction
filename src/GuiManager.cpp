@@ -1,55 +1,15 @@
-﻿#include "GuiManager.h"
-#include <QApplication>
-#include <QFile>
-#include <QTextEdit>
-#include <QAbstractButton>
-#include <QFileDialog>
-#include <QPushButton>
-#include <QMessageBox>
-#include <QAction>
-#include <QMenu>
-#include <QStatusBar>
-#include <QDebug>
-#include <QElapsedTimer>
-#include <QRadioButton>
-#include <QButtonGroup>
-#include <QCalendarWidget>
-#include <QXmlStreamWriter>
-#include <QTextStream>
-#include <QFontComboBox>
-#include <QLabel>
-#include "occView.h"
-#include <chrono>
-#include <iostream>
-#include"DockModelTree.h"
-#include<QScreen>
-#include<map>
+﻿#include "occView.h"
 #include "PartSolution.h"
-#include <QDebug>
-#include"WindownsManager.h"
-#include <QThread>
 #include"CamWindowManager.h"
 #include"CamGuiManager.h"
+#include "GuiManager.h"
 using namespace CAM;
 
-#define PRINT_COST_START()                                                                                             \
-    QElapsedTimer __TMP_COST;                                                                                          \
-    __TMP_COST.start();                                                                                                \
-    int __TMP_LASTTIMES = 0
-
-#define PRINT_COST(STR)                                                                                                \
-    do {                                                                                                               \
-        int ___TMP_INT = __TMP_COST.elapsed();                                                                         \
-        qDebug() << STR << " cost " << ___TMP_INT - __TMP_LASTTIMES << " ms (" << ___TMP_INT << ")";                   \
-        m_edit->append(QString("%1 cost %2 ms(%3)").arg(STR).arg(___TMP_INT - __TMP_LASTTIMES).arg(___TMP_INT));       \
-        __TMP_LASTTIMES = ___TMP_INT;                                                                                  \
-    } while (0)
 
 
 /*使用案例*/
 MainWindow::MainWindow(QWidget* par) 
 {
-    PRINT_COST_START();
     parent = par;
     setWindowTitle(("CAM"));
     myCamWindowManager = new CamWindowManager(this);

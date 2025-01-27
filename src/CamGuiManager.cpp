@@ -1076,7 +1076,7 @@ void CAM::SelectCurveGui::ShowSelectCurveNum()
 {
 
 	Standard_Integer curveNum{ 0 };
-	curveNum = viewerWindow->interactivemanager->selectedShapesList.size();
+	curveNum = Standard_Integer(viewerWindow->interactivemanager->selectedShapesList.size());
 	string text = "已选取曲线(";
 	string	num = to_string(curveNum);
 	text = text + num + ")";

@@ -1,5 +1,4 @@
 ﻿#pragma once
-#define _HAS_STD_BYTE 0  // before any includes
 #include <QWidget>
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>

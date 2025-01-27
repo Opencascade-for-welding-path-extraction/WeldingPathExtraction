@@ -3,7 +3,6 @@
 #include <opencascade/AIS_InteractiveContext.hxx>
 #include "PartSolution.h"
 #include <QDebug>
-#include "WindownsManager.h"
 #include <Qstring>
 #include "DisplayCore.h"
 #include "CamGuiManager.h"

@@ -523,7 +523,6 @@ void CAM::InteractiveManager::HilightCaptureCircle(TopoDS_Shape shape, Standard_
 		}
 		else if (curveType == GeomAbs_Line)
 		{
-			Standard_Real first, last;
 			if (!captureHilightShape) captureHilightShape = new AIS_Shape(shape);
 			auto drawer = captureHilightShape->Attributes();
 			auto acolor = Quantity_Color(color[0] / 255, color[1] / 255, color[2] / 255, Quantity_TOC_RGB);
